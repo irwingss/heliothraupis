@@ -17,4 +17,4 @@ It is named after Heliothraupis tanager (Inti Tanager) a recently formaly descri
 2. [Análisis Multivariados en R II](https://irwingss.github.io/R-IIAP-UNAMAD/slide2/#1)
 3. [Análisis GLM en R](https://irwingss.github.io/R-IIAP-UNAMAD/slide3/#1)
 4. [Hurdle Models y Análisis GLMM R](https://irwingss.github.io/R-IIAP-UNAMAD/slide4/#1)
-5. [Introducción al lenguaje de programación R - Clase RSG, Perú "PDF"](https://github.com/irwingss/heliothraupis/raw/49421e44f3aa7078553c44d0a3c1c83533f6386e/2021ClassDataScienceRSG/Clases%20IDSPRS.pdf)
+5. [Introducción al lenguaje de programación R - Clase RSG, Perú (PDF)](https://github.com/irwingss/heliothraupis/raw/49421e44f3aa7078553c44d0a3c1c83533f6386e/2021ClassDataScienceRSG/Clases%20IDSPRS.pdf)
