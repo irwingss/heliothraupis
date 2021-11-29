@@ -12,7 +12,7 @@ It is named after Heliothraupis tanager (Inti Tanager) a recently formaly descri
 ### Webinars
 1. [¿Qué puedo hacer con R y RStudio?: Ventajas de aprender a programar](https://irwingss.github.io/heliothraupis/wbnr62021/#1)
 
-### Clases
+### Lectures
 1. [Análisis Multivariados en R I](https://irwingss.github.io/R-IIAP-UNAMAD/slide1/#1)
 2. [Análisis Multivariados en R II](https://irwingss.github.io/R-IIAP-UNAMAD/slide2/#1)
 3. [Análisis GLM en R](https://irwingss.github.io/R-IIAP-UNAMAD/slide3/#1)
