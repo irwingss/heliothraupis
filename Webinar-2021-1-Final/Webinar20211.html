@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Webinar-2021-1.knit</title>
+    <meta charset="utf-8" />
+    <script src="libs/header-attrs-2.8/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/rlatinoamerica.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/rlatinoamerica-fonts.css" rel="stylesheet" />
+    <link href="libs/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view-0.2.6/tile-view.js"></script>
+    <script src="libs/xaringanExtra-webcam-0.0.1/webcam.js"></script>
+    <script id="xaringanExtra-webcam-options" type="application/json">{"width":"200","height":"200","margin":"1em"}</script>
+    <link href="libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset-0.2.6/panelset.js"></script>
+    <script src="libs/xaringanExtra_fit-screen-0.2.6/fit-screen.js"></script>
+    <script src="libs/clipboard-2.0.6/clipboard.min.js"></script>
+    <link href="libs/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.js"></script>
+    <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
+    <link href="libs/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="https:/cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+class: title-slide
+background-image: url(figs/bannerAUFPAS2.png)
+background-position: 11% 10%
+background-size: 500px
+
+# &lt;span style = 'font-size: 100%;'&gt;¿Qué puedo hacer con R y RStudio?&lt;/span&gt;
+### &lt;span style = 'color: #4a4a4a; font-size: 120%'&gt;Ventajas de aprender a programar&lt;/span&gt;
+&lt;br&gt;
+### &lt;span style = 'font-size: 90%;color:#4a4a4a'&gt;Blgo. Irwing S. Saldaña&lt;/span&gt;
+
+### &lt;span style = 'font-size: 70%;color:#15b2db'&gt;Instituto de Ciencias Antonio Brack&lt;/span&gt;
+### &lt;span style = 'font-size: 70%;color:#aaa59f'&gt;Dpto. Ecoinformática y Biogeografía&lt;/span&gt;
+
+
+
+
+---
+class: inverse, middle, center 
+background-image: url(https://source.unsplash.com/jqgsM3B9Fpo)
+background-size: cover
+background-position: top
+
+&lt;img src="figs/aboutme.png" width="25%" style="display: block; margin: auto;" /&gt;
+
+### Blgo. Irwing S. Saldaña &lt;br&gt;&lt;span style= 'font-size:80%; font-weigth: light;'&gt; Instructor&lt;/span&gt;
+&lt;span style= 'font-family: calibri; color: white'&gt;Departamento de Ecoinformática y Biogeografía,&lt;br&gt;
+Instituto de Ciencias Antonio Brack, Perú&lt;/span&gt;
+
+.white[[Website](https://www.brackinstitute.com/)|[ResearchGate](https://www.researchgate.net/profile/Irwing-Saldana)|[Linkedin](https://www.linkedin.com/in/irssald/)|[R Blog](https://www.brackinstitute.com/rlatinoamerica) ]
+
+---
+class: inverse, middle, center , animated, slideInRight
+name: GLM
+
+# La camino de R&lt;br&gt;
+[ Por qué aprender un lenguaje de programación ]
+
+---
+# RStudio
+
+--
+
+- R: Lenguaje de programación para **análisis estadístico y graficación**.
+
+--
+
+- Gran **comunidad** de desarrollo.
+
+--
+
+
+```r
+# Cargando la lista de paquetes de CRAN
+paquetes &lt;- available.packages() |&gt; as.data.frame() 
+*length(paquetes$Package)
+```
+
+```
+## [1] 17721
+```
+
+--
+
+- **RStudio es un intérprete de R** que permite tener una experiencia más sencilla al trabajar con código.
+
+---
+
+class: inverse, middle, center , animated, slideInRight
+name: GLM
+
+# Flexibilidad de análisis &lt;br&gt;
+[ Gracias a una de las comunidades más grandes del mundo ]
+
+
+---
+
+# Flexibilidad de análisis 
+
+- Miles de funciones para realizar análisis diversos.
+
+- Librerías especializadas para especialidades específicas.
+
+- Capacidad de ajustar los parámetros a nivel avanzado.
+
+- Pasar de un análisis a otro es sencillo.
+
+- Flujo de trabajo ¡Eureka! fácil de seguir.
+
+
+
+```r
+library(tidyverse)
+data("airquality")
+names(airquality)
+lm(Temp ~ Ozone, data=airquality) |&gt; summary()
+plot(Temp ~ Ozone, data=airquality)
+```
+
+Veamos qué podemos hacer en RStudio.
+
+
+---
+
+class: inverse, middle, center , animated, slideInRight
+name: GLM
+
+# Gramática de Gráficos con ggplot2 &lt;br&gt;
+[ La mejor herramienta de graficación estadística ]
+
+---
+
+# Salve ggplot2
+
+--
+
+- **gg** proviene de Gramática de Gráficos
+
+--
+
+- La mejor librería de graficación por su flexibilidad.
+
+--
+
+- Decenas de librerías asociadas a ggplot2 que simplifican la graficación aún más.  
+
+
+---
+# GGally
+
+.panelset[
+.panel[.panel-name[Gráfico]
+
+&lt;img src="Webinar-2021-1_files/figure-html/unnamed-chunk-4-1.png" width="65%" style="display: block; margin: auto;" /&gt;
+
+]
+
+.panel[.panel-name[Código]
+
+```r
+# install.packages("GGally")
+library(GGally)
+p &lt;- ggpairs(iris, aes(color = Species), upper = list(continuous = wrap("cor", size = 2)))+
+  theme_bw()
+
+for(i in 1:p$nrow) {
+  for(j in 1:p$ncol){
+    p[i,j] &lt;- p[i,j] + 
+      scale_fill_manual(values=c("#15b2db","#5f00db","#f72585")) +
+      scale_color_manual(values=c("#15b2db","#5f00db","#f72585"))  
+  }
+}
+
+p
+```
+
+]
+]
+
+---
+
+# ggpubr
+
+.panelset[
+.panel[.panel-name[Gráfico]
+&lt;img src="Webinar-2021-1_files/figure-html/unnamed-chunk-6-1.png" width="65%" style="display: block; margin: auto;" /&gt;
+
+]
+
+.panel[.panel-name[Código]
+
+```r
+#install.packages("ggpubr")
+library(ggpubr)
+data("ToothGrowth")
+df &lt;- ToothGrowth
+p &lt;- ggboxplot(df, x = "dose", y = "len",
+                color = "dose", palette =c("#15b2db","#5f00db","#f72585"),
+                add = "jitter", shape = "dose")
+my_comparisons &lt;- list( c("0.5", "1"), c("1", "2"), c("0.5", "2") )
+p + stat_compare_means(comparisons = my_comparisons)+
+  stat_compare_means(label.y = 50)  
+```
+
+]
+]
+
+---
+
+# ggridges
+
+.panelset[
+.panel[.panel-name[Gráfico]
+&lt;img src="Webinar-2021-1_files/figure-html/unnamed-chunk-8-1.png" width="65%" style="display: block; margin: auto;" /&gt;
+
+]
+
+.panel[.panel-name[Código]
+
+```r
+#install.packages("ggridges")
+library(ggridges)
+data("iris")
+ggplot(iris, aes(x = Petal.Length, y = Species, fill = 0.5 - abs(0.5 - stat(ecdf)))) +
+  stat_density_ridges(geom = "density_ridges_gradient", calc_ecdf = TRUE) +
+  scale_fill_gradient2(low="#f72585", mid="#15b2db", high = "#5f00db", 
+                       guide = "colourbar", name = "ECDF - Probabilidad")+
+  theme_classic2()
+```
+
+]
+]
+
+---
+
+# ggradar
+
+.panelset[
+.panel[.panel-name[Gráfico]
+&lt;img src="Webinar-2021-1_files/figure-html/unnamed-chunk-10-1.png" width="65%" style="display: block; margin: auto;" /&gt;
+
+]
+
+.panel[.panel-name[Código]
+
+```r
+#devtools::install_github("ricardo-bion/ggradar", dependencies = TRUE)
+library(ggradar)
+library(tidyverse)
+library(scales)
+
+mtcars_radar &lt;- mtcars %&gt;% 
+  as_tibble(rownames = "group") %&gt;% 
+  mutate_at(vars(-group), rescale) %&gt;% 
+  tail(4) %&gt;% 
+  select(1:10)
+
+ggradar(mtcars_radar)+
+  theme(legend.position = "none")+
+  scale_color_manual(values = c("#15b2db","#17004a","#5f00db","#b5179e","#f72585"))
+```
+
+]
+]
+
+---
+
+# Y la lista sigue y sigue...
+
+- ggcorrplot
+- ggstatsplot
+- Plotly
+- ggthemes
+- gganimate
+- patchwork
+- ggmap
+- ggrepel
+- ggdendro
+- sjPlot
+- ggvegan
+- ggforce
+- ggupset
+
+
+---
+
+- Veamos la aplicación con el modelo creado hace un momento
+
+&lt;img src="figs/quadratic.png" width="70%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Libro Visualización de Datos con R
+&lt;iframe src="https://rkabacoff.github.io/datavis/Models.html" width="2175.6" height="400px"&gt;&lt;/iframe&gt;
+
+---
+class: inverse, middle, center , animated, slideInRight
+name: GLM
+
+# Proyectos en RStudio &lt;br&gt;
+[ Lo mejor para lidiar con varios proyectos a la vez ]
+
+---
+
+# Proyectos en RStudio
+
+--
+
+- Permiten tener todo organizado.
+
+--
+
+- Facilita la carga de archivos a RStudio.
+
+--
+
+- Facilita el trabajo con diferentes proyectos a la vez.
+
+---
+background-image: url(figs/project.png)
+background-size: contain
+background-color: #ebebeb
+
+---
+class: inverse, middle, center , animated, slideInRight
+name: GLM
+ 
+# Las mejoras de RStudio&lt;br&gt;
+[ Actualización version 1.4.1717 ]
+
+
+---
+
+# RStudio cada vez mejor
+
+--
+
+.pull-left[
+
+- Última versión 1.4.1717. [Descargar](https://download1.rstudio.org/desktop/windows/RStudio-1.4.1717.exe)
+
+- **Mejoras:** Paréntesis de arcoíris (Rainbow Parenthesis)
+
+&lt;img src="figs/rainbow2.png" width="100%" /&gt;
+]
+
+--
+
+.pull-right[
+
+&lt;img src="figs/rainbow.png" width="80%" /&gt;
+]
+
+---
+
+- **Mejoras:** Editor Visual de RMarkdown (Visual Editor)
+
+--
+
+&lt;img src="figs/rmarkdown.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+- **Mejoras de R implementada en el último RStudio:** Pipe nativo |&gt;
+
+
+```r
+data(airquality)
+
+# El nuevo Pipe Nativo
+#airquality |&gt; mutate(tiempo = as.character(paste0(Month,"-",Day)) ggplot(aes(x=))
+
+# El Pipe (original) de Tidyverse
+```
+
+
+---
+class: inverse, middle, center , animated, slideInRight
+name: GLM
+
+# RMarkdown &lt;br&gt;
+[ Reportes, Papers y Páginas Web ]
+
+---
+
+.pull-left[
+&lt;img src="figs/libro Rmarkdown.png" width="70%" /&gt;
+]
+
+.pull-right[
+
+.pull-left[
+&lt;img src="figs/rmarkdown logo.png" width="60%" /&gt;
+
+&lt;img src="figs/knitr logo.png" width="55%" /&gt;
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+- [Link lectura libro (o vean la siguiente diapositiva)](https://bookdown.org/yihui/rmarkdown-cookbook/)
+
+]
+
+.pull-rigth[
+&lt;img src="figs/bookdown.png" width="30%" /&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+### rticle
+
+]
+]
+
+
+
+---
+
+# Libro de Cocina de RMarkdown
+&lt;iframe src="https://bookdown.org/yihui/rmarkdown-cookbook/" width="2175.6" height="400px"&gt;&lt;/iframe&gt;
+
+
+---
+
+# [rticle](https://github.com/rstudio/rticles#readme): la librería de las plantillas de Journals
+
+
+&lt;img src="figs/rticle.png" width="90%" style="display: block; margin: auto;" /&gt;
+
+
+---
+class: inverse, middle, center , animated, slideInRight
+name: GLM
+
+# Github &lt;br&gt;
+[ Crear páginas web y repositorios ]
+
+---
+
+# Páginas web gratuitas con GitHub
+
+.content-box-red[**Utilizando RMarkdown**], usando el lenguaje de R con un poco de conocimientos en estructura YAML, y, si uno desea, algo de HTML y CSS con [Remark JS](https://remarkjs.com/#1), y una pizca de LaTeX para las funciones matemáticas. [URL RLab](https://irwingss.github.io/IrwingRLab/PractCasa04-full.html)
+
+&lt;img src="figs/website github.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+---
+class: inverse, middle, center , animated, slideInRight
+name: GLM
+
+# Xaringan &lt;br&gt;
+[ Crea un Genjutsu con tus Diapositivas ]
+
+
+---
+
+# Gráficos de alta calidad en tus diapositivas
+
+.panelset[
+.panel[.panel-name[Código R]
+
+
+```r
+library(tidyverse)
+data(iris)
+*iris %&gt;% mutate(Species = factor(Species,
+*                         labels = c("setosa"="I. setosa",
+*                                    "versicolor"="I. versicolor",
+*                                    "virginica"="I. virginica"))) %&gt;%
+  ggplot(aes(x=Sepal.Length, y=Petal.Length, color= Species))+
+  geom_point(size=4, alpha=0.7)+
+  labs(x="Longitud de Sépalo (mm)", y="Longitud de Pétalo (mm)", 
+       color="Especies",
+       title = "Gráfico Bivariado (Dispersión de Puntos)", 
+       subtitle="Para graficar la relación de dos variables")+
+  theme_minimal()+
+  scale_color_manual(values = c("#15b2db","#5f00db","#f72585"))+
+theme(legend.position = "bottom",
+      legend.text = element_text(face=3))
+```
+
+]
+
+.panel[.panel-name[Figura 1.1]
+&lt;img src="Webinar-2021-1_files/figure-html/unnamed-chunk-25-1.png" width="65%" style="display: block; margin: auto;" /&gt;
+]
+]
+
+---
+
+&lt;img src="Webinar-2021-1_files/figure-html/unnamed-chunk-26-1.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Resultados interactivos en tus  [diapositivas](https://garthtarr.github.io/sydney_xaringan/#12)
+
+.scroll-box-18[
+
+```r
+data(iris)
+*lm(Petal.Length ~ Species, data = iris) |&gt; summary()
+```
+
+```
+## 
+## Call:
+## lm(formula = Petal.Length ~ Species, data = iris)
+## 
+## Residuals:
+##    Min     1Q Median     3Q    Max 
+## -1.260 -0.258  0.038  0.240  1.348 
+## 
+## Coefficients:
+##                   Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)        1.46200    0.06086   24.02   &lt;2e-16 ***
+## Speciesversicolor  2.79800    0.08607   32.51   &lt;2e-16 ***
+## Speciesvirginica   4.09000    0.08607   47.52   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 0.4303 on 147 degrees of freedom
+## Multiple R-squared:  0.9414,	Adjusted R-squared:  0.9406 
+## F-statistic:  1180 on 2 and 147 DF,  p-value: &lt; 2.2e-16
+```
+]
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"highlightSpans": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+<style>
+.logo {
+  background-image: url(https://raw.githubusercontent.com/irwingss/IrwingRLab/master/escudo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 1em;
+  left: 4em;
+  width: 25px;
+  height: 25px;
+  z-index: 0;
+}
+</style>
+
+<script>
+document
+  .querySelectorAll(
+    '.remark-slide-content' +
+    ':not(.title-slide)' +
+    // add additional classes to exclude here, e.g.
+    // ':not(.inverse)' +
+    ':not(.hide-logo)'
+  )
+  .forEach(el => {
+    el.innerHTML += '<div class="logo"></div>';
+  });
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
