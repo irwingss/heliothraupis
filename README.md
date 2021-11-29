@@ -5,6 +5,6 @@ It is named after Heliothraupis tanager (Inti Tanager) a recently formaly descri
 - Frontispiece: New tanager drescribed in this issue by Lane et al. Male above, female below. Watercolor by Daniel F. Lane.
 
 
-<img src="https://raw.githubusercontent.com/irwingss/heliothraupis/main/heliothraupis.png" width="800"/>
+<img src="https://raw.githubusercontent.com/irwingss/heliothraupis/main/heliothraupis.png" width="600"/>
 
 
